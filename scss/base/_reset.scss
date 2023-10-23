@@ -42,3 +42,8 @@ html {
 *, *::before, *::after {
     box-sizing: inherit;
 }
+
+img {
+    display: block;
+    max-width: 100%;
+}

@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "main": "scss/app.scss",
   "scripts": {
     "dev": "parcel tests/index.html",
     "build": "PARCEL_WORKERS=0 parcel build scss/app.scss --dist-dir css"
