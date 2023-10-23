@@ -1,0 +1,21 @@
+@mixin make-col($breakpoint) {
+    $breakpoint-suffix: if($breakpoint == "xs", "", "-#{$breakpoint}");
+
+    @for $i from 1 through $columnNumbers {
+        .col#{$breakpoint-suffix}-#{$i} {
+            grid-column: span #{$i} / span #{$i};
+        }
+    }
+}
+
+@mixin make-col-start($breakpoint) {
+    $breakpoint-suffix: if($breakpoint == "xs", "", "-#{$breakpoint}");
+
+    @for $i from 1 through $columnNumbers {
+        .col#{$breakpoint-suffix}-start-#{$i} {
+            $column-start: $i + 1;
+
+            grid-column-start: $column-start;
+        }
+    }
+}

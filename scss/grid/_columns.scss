@@ -1,0 +1,9 @@
+@each $breakpoint, $size in $breakpoints {
+    @include media-breakpoint-up($size) {
+        @include make-col($breakpoint);
+    }
+
+    @include media-breakpoint-up($size) {
+        @include make-col-start($breakpoint);
+    }
+}
