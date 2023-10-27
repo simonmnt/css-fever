@@ -1,0 +1,7 @@
+.d-grid {
+    display: grid;
+    grid-template-columns: repeat($columnNumbers, 1fr);
+    grid-gap: $gap;
+
+    padding: 0 $gap;
+}
