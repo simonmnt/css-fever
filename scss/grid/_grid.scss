@@ -4,4 +4,8 @@
     grid-gap: $gap;
 
     padding: 0 $gap;
+
+    @include md {
+        padding: 0;
+    }
 }

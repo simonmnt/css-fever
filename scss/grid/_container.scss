@@ -5,22 +5,22 @@
     margin-right: auto;
 
     @include sm {
-        max-width: map.get($breakpoints, 'sm');
+        max-width: map.get($breakpoints, 'sm') - (2 * $gap);
     }
 
     @include md {
-        max-width: map.get($breakpoints, 'md');
+        max-width: map.get($breakpoints, 'md') - (2 * $gap);
     }
 
     @include lg {
-        max-width: map.get($breakpoints, 'lg');
+        max-width: map.get($breakpoints, 'lg') - (2 * $gap);
     }
 
     @include xl {
-        max-width: map.get($breakpoints, 'xl');
+        max-width: map.get($breakpoints, 'xl') - (2 * $gap);
     }
 
     @include xxl {
-        max-width: map.get($breakpoints, 'xxl');
+        max-width: map.get($breakpoints, 'xxl') - (2 * $gap);
     }
 }
