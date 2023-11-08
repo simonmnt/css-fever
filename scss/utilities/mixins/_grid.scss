@@ -25,7 +25,7 @@
 
     @for $i from 1 through $columnNumbers {
         .row#{$breakpoint-suffix}-start-#{$i} {
-            $column-start: $i + 1;
+            $column-start: $i;
 
             grid-row-start: $column-start;
         }
