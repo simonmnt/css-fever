@@ -19,3 +19,15 @@
         }
     }
 }
+
+@mixin make-row-start($breakpoint) {
+    $breakpoint-suffix: if($breakpoint == "xs", "", "-#{$breakpoint}");
+
+    @for $i from 1 through $columnNumbers {
+        .row#{$breakpoint-suffix}-start-#{$i} {
+            $column-start: $i + 1;
+
+            grid-row-start: $column-start;
+        }
+    }
+}

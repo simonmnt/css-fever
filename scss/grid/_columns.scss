@@ -6,4 +6,8 @@
     @include media-breakpoint-up($size) {
         @include make-col-start($breakpoint);
     }
+
+    @include media-breakpoint-up($size) {
+        @include make-row-start($breakpoint);
+    }
 }
