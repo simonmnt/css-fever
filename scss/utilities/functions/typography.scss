@@ -1,0 +1,26 @@
+@use "sass:math";
+
+/**
+    https://wearerequired.github.io/fluidity/
+    $smallestFont: px | rem
+    $largestFont: px | rem
+    $smallestViewport: px
+    $largestViewport: px
+ */
+@function fluid($smallestFont: 16, $largestFont, $smallestViewport, $largestViewport, $unit: px) {
+    @if ($unit == rem) {
+        $smallestViewport: math.div($smallestViewport, 16);
+        $largestViewport: math.div($largestViewport, 16);
+    }
+
+    $slope: math.div($largestFont - $smallestFont, $largestViewport - $smallestViewport);
+    $yOffset: -$smallestViewport * $slope + $smallestFont;
+
+    $preferredFontSize: calc(#{$yOffset}px + #{$slope * 100}vw);
+
+    @if ($unit == rem) {
+        $preferredFontSize: calc(#{$yOffset}rem + #{$slope * 100}vw);
+    }
+
+    @return clamp(#{$smallestFont}#{$unit}, #{$preferredFontSize}, #{$largestFont}#{$unit})
+}

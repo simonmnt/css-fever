@@ -1,3 +1,5 @@
+@import 'scss/app.scss';
+
 body {
     background-color: #FDFCFD;
     font-family: Lato, sans-serif;
@@ -5,6 +7,7 @@ body {
 
 div[class*=col-] {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 
@@ -13,7 +16,6 @@ div[class*=col-] {
     color: #8145B5;
 
     background-color: #F4F0FE;
-    height: 64px;
 
     border: 1px dashed #D4CAFE;
 
@@ -22,4 +24,8 @@ div[class*=col-] {
 
 .container + .container {
     margin-top: 16px;
+}
+
+p {
+    font-size: #{fluid(1, 1.125, 375, 1504, rem)};
 }
