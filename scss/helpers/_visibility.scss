@@ -1,0 +1,36 @@
+@use '../utilities/mixins/breakpoints' as mx;
+
+@include mx.xxl {
+    .xxl-hidden {
+        display: none;
+    }
+}
+
+@include mx.xl {
+    .xl-hidden {
+        display: none;
+    }
+}
+
+@include mx.lg {
+    .lg-hidden {
+        display: none;
+    }
+
+}
+
+@include mx.md {
+    .md-hidden {
+        display: none;
+    }
+}
+
+@include mx.sm {
+    .sm-hidden {
+        display: none;
+    }
+}
+
+.hidden {
+    display: none;
+}
