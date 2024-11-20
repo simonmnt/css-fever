@@ -1,0 +1,5 @@
+@mixin touch-screen {
+    @media (pointer: coarse) {
+        @content;
+    }
+}
