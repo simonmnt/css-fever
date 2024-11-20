@@ -1,5 +1,11 @@
-@mixin touch-screen {
+@mixin touchscreen {
     @media (pointer: coarse) {
+        @content;
+    }
+}
+
+@mixin not-touchscreen {
+    @media (hover: hover) {
         @content;
     }
 }
