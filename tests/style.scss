@@ -1,4 +1,4 @@
-@import 'scss/app.scss';
+@use '../scss/app';
 
 body {
     background-color: #FDFCFD;
@@ -29,3 +29,4 @@ div[class*=col-] {
 p {
     font-size: #{fluid(1, 1.125, 375, 1504, rem)};
 }
+

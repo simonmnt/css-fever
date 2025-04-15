@@ -4,11 +4,12 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "parcel tests/index.html",
-    "build": "PARCEL_WORKERS=0 parcel build scss/app.scss --dist-dir css"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "devDependencies": {
-    "@parcel/transformer-sass": "2.12.0",
-    "parcel": "^2.12.0"
+    "sass": "^1.86.3",
+    "vite": "^6.2.2"
   }
 }

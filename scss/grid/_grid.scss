@@ -1,11 +1,14 @@
+@use "../base/variables";
+@use "../utilities/mixins/breakpoints";
+
 .d-grid {
     display: grid;
-    grid-template-columns: repeat($columnNumbers, 1fr);
-    grid-gap: $gap;
+    grid-template-columns: repeat(variables.$columnNumbers, 1fr);
+    grid-gap: variables.$gap;
 
-    padding: 0 $gap;
+    padding: 0 variables.$gap;
 
-    @include md {
+    @include breakpoints.md {
         padding: 0;
     }
 }

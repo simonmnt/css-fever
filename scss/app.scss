@@ -1,5 +1,6 @@
-@import "utilities/all";
+@use "utilities/all" as utilities-style;
 
-@import "base/all";
-@import "helpers/all";
-@import "grid/all";
+@use "base/all" as base-style;
+@use "helpers/all" as helpers-style;
+@use "grid/all" as grid-style;
+

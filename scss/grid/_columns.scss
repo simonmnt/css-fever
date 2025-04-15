@@ -1,13 +1,17 @@
-@each $breakpoint, $size in $breakpoints {
-    @include media-breakpoint-up($size) {
-        @include make-col($breakpoint);
+@use "../base/variables";
+@use "../utilities/mixins/breakpoints";
+@use "../utilities/mixins/grid";
+
+@each $breakpoint, $size in variables.$breakpoints {
+    @include breakpoints.media-breakpoint-up($size) {
+        @include grid.make-col($breakpoint);
     }
 
-    @include media-breakpoint-up($size) {
-        @include make-col-start($breakpoint);
+    @include breakpoints.media-breakpoint-up($size) {
+        @include grid.make-col-start($breakpoint);
     }
 
-    @include media-breakpoint-up($size) {
-        @include make-row-start($breakpoint);
+    @include breakpoints.media-breakpoint-up($size) {
+        @include grid.make-row-start($breakpoint);
     }
 }
