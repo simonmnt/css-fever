@@ -1,7 +1,7 @@
 @use '../../base/variables';
 
 @mixin make-col($breakpoint) {
-    $breakpoint-suffix: if($breakpoint == "xs", "", "-#{$breakpoint}");
+    $breakpoint-suffix: if(sass($breakpoint == "xs"): ""; else: "-#{$breakpoint}");
 
     @for $i from 1 through variables.$columnNumbers {
         .col#{$breakpoint-suffix}-#{$i} {
@@ -11,7 +11,7 @@
 }
 
 @mixin make-col-start($breakpoint) {
-    $breakpoint-suffix: if($breakpoint == "xs", "", "-#{$breakpoint}");
+    $breakpoint-suffix: if(sass($breakpoint == "xs"): ""; else: "-#{$breakpoint}");
 
     @for $i from 1 through variables.$columnNumbers {
         .col#{$breakpoint-suffix}-start-#{$i} {
@@ -23,7 +23,7 @@
 }
 
 @mixin make-row-start($breakpoint) {
-    $breakpoint-suffix: if($breakpoint == "xs", "", "-#{$breakpoint}");
+    $breakpoint-suffix: if(sass($breakpoint == "xs"): ""; else: "-#{$breakpoint}");
 
     @for $i from 1 through variables.$columnNumbers {
         .row#{$breakpoint-suffix}-start-#{$i} {

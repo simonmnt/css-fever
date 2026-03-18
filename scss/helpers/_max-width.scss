@@ -1,0 +1,33 @@
+@use "sass:map";
+@use '../utilities/mixins/breakpoints';
+@use '../base/variables';
+
+.max-w-sm {
+    @include breakpoints.sm {
+        max-width: map.get(variables.$breakpoints, 'sm') - (2 * variables.$gap);
+    }
+}
+
+.max-w-md {
+    @include breakpoints.md {
+        max-width: map.get(variables.$breakpoints, 'md') - (2 * variables.$gap);
+    }
+}
+
+.max-w-lg {
+    @include breakpoints.lg {
+        max-width: map.get(variables.$breakpoints, 'lg') - (2 * variables.$gap);
+    }
+}
+
+.max-w-xl {
+    @include breakpoints.xl {
+        max-width: map.get(variables.$breakpoints, 'xl') - (2 * variables.$gap);
+    }
+}
+
+.max-w-xxl {
+    @include breakpoints.xxl {
+        max-width: map.get(variables.$breakpoints, 'xxl') - (2 * variables.$gap);
+    }
+}
